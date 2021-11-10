@@ -122,8 +122,8 @@ let pokemonRepository = (function () {
   function showDetails(item) { 
     pokemonRepository.loadDetails(item).then(function () {
       showModal(item.name, item.height, item.imageUrl, item.types);
-     let types = pokemon.types[0].type.name;
-     let imgUrl = pokemon.sprites.other['official-artwork']['front_default'];
+      let pokemon = item
+      imgURL = pokemon.sprites.other['official-artwork']['front_default'];
       let height = item.height; 
       let img = document.querySelector('img');
       height.text = item.height
