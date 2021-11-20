@@ -21,7 +21,7 @@ let pokemonRepository = (function () {
     let listpokemon = document.createElement('li');
     let button = document.createElement('button');
     let item = pokemon
-    button.innerText = pokemon.name;
+    button.innerText = pokemon.name.toUpperCase();
     button.classList.add('btn-primary');
     button.setAttribute('data-toggle', 'modal');
     button.setAttribute('data-target', '#modal');
@@ -80,7 +80,7 @@ let pokemonRepository = (function () {
     modalTitle.empty();
     modalBody.empty();
     //consider adding back image back image code commented out
-    let nameElement = $("<h1>" + item.name + "</h1>");
+    let nameElement = $("<h1>" + item.name.toUpperCase() + "</h1>");
     let imageElementFront = $('<img class="modal-img" style="width:50%">');
     imageElementFront.attr("src", item.imageUrlFront);
     //let imageElementBack = $('<img class="modal-img" style="width:50%">');
