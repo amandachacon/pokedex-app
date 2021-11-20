@@ -40,7 +40,7 @@ let pokemonRepository = (function () {
       json.results.forEach(function (item) {
         let pokemon = {
           name: item.name,
-          detailsUrl: item.Url
+          detailsUrl: item.url
         };
         add(pokemon);
       });
@@ -58,6 +58,7 @@ let pokemonRepository = (function () {
       item.imageUrlFront = details.sprites.front_default;
       item.height = details.height;
       item.types = details.types;
+      item.types = pokemon.types[0].type.name;
     }).catch(function (e) {
       console.error(e);
     });
@@ -86,6 +87,7 @@ let pokemonRepository = (function () {
     //imageElementBack.attr("src", item.ImageURLBack);
     let heightElement = $("<p>" + "height : " + item.height + "</p>");
     let typesElement = $("<p>" + "types : " + item.types + "</p>");
+
 
 
     modalTitle.append(nameElement);
