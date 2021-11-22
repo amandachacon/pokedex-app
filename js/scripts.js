@@ -70,7 +70,6 @@ let pokemonRepository = (function () {
     });
   }
 
-  //changed item to pokemon (does name heigh string have anything to do with this?-nope breaks page)
   function showModal(pokemon) {
     let modalBody = $(".modal-body");
     let modalTitle = $(".modal-title");
@@ -79,14 +78,11 @@ let pokemonRepository = (function () {
     let item = pokemon
     modalTitle.empty();
     modalBody.empty();
-    //consider adding back image back image code commented out
     let nameElement = $("<h1>" + item.name.toUpperCase() + "</h1>");
     let imageElementFront = $('<img class="modal-img" style="width:50%">');
     imageElementFront.attr("src", item.imageUrlFront);
-    //let imageElementBack = $('<img class="modal-img" style="width:50%">');
-    //imageElementBack.attr("src", item.ImageURLBack);
     let heightElement = $("<p>" + "height : " + item.height + "</p>");
-    let typesElement = $("<p>" + "types : " + item.types + "</p>");
+    let typesElement = $("<p>" + "type : " + item.types + "</p>");
 
 
 
