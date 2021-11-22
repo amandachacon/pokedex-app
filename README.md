@@ -1,4 +1,4 @@
-#Pokedex
+# Pokedex
 ***
 
 Javascript app created as a part of Career Foundry's Full Stack Web Development Program. 
